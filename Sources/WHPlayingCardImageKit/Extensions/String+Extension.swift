@@ -1,6 +1,6 @@
 //
 //  String+Extension.swift
-//  
+//  WHPlayingCardImageKit
 //
 //  Created by William Hale on 1/28/22.
 //
