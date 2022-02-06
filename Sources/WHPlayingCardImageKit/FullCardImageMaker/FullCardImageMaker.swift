@@ -1,9 +1,8 @@
 //
 //  FullCardImageMaker.swift
-//  CardImageKit
+//  WHPlayingCardImageKit
 //
 //  Created by William Hale on 11/24/09.
-//  Copyright 2009 whale. All rights reserved.
 //
 
 import SpriteKit
