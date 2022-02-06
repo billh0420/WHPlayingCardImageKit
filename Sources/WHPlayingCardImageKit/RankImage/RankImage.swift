@@ -1,9 +1,8 @@
 //
 //  RankImage.swift
-//  CardImageKit
+//  WHPlayingCardImageKit
 //
 //  Created by William Hale on 10/4/14.
-//  Copyright (c) 2014 William Hale. All rights reserved.
 //
 
 import SpriteKit
