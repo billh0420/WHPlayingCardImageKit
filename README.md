@@ -91,3 +91,52 @@ func createCardBackImage(cardSize: CGSize) -> WHImage {
     return cardBackImage
 }
 ```
+
+### Load card images in the background
+
+```swift
+
+import SpriteKit
+import WHCrossPlatformKit
+import WHPlayingCardImageKit
+
+class GameViewController: NSViewController {
+
+    @IBOutlet weak var mainView:SKView!
+    
+    var isUseFullCardImage = false // Note: will obtain value from settings
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        mainView.showsFPS = true
+        mainView.showsNodeCount = true
+
+        setViewFrameSize()
+
+        let isUseFullCardImage = true // Note: should obtain value from settings
+
+        let gameSceneSize = view.frame.size
+        let defaultCardSize = CardImageAtlas.cardImageAtlasDefaultCardSize
+        let gameSceneScaler = GameSceneScaler(size: gameSceneSize, defaultCardSize: defaultCardSize)
+        let gameScene = GameScene(size: gameSceneSize, gameSceneScaler: gameSceneScaler, isUseFullCardImage: isUseFullCardImage)
+
+        do {
+            let cards = gameScene.deck
+            let defaultCardSize = gameSceneScaler.defaultCardSize
+            let scaleFactor = gameSceneScaler.scaleFactor
+            gameScene.cardImageAtlas.backgroundLoadCardImages(cards: cards, defaultCardSize: defaultCardSize, scaleFactor: scaleFactor)
+        }
+
+        // Present the scene
+        mainView.presentScene(gameScene)
+    }
+}
+
+extension GameViewController {
+
+    fileprivate func setViewFrameSize() {
+        let screenSize = NSScreen.getScreenSize()
+        ...
+    }
+}
+```
