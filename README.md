@@ -11,7 +11,6 @@ A swift package to make 52 playing card images for a given scale factor.
 - iOS 9.0+
 - macOS 10.11+
 
-# Installation
 ## Features
 - [x] The card images can be created scaled.
 - [x] A card back image can be created scaled.
