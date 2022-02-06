@@ -27,7 +27,7 @@ enter the repository URL into the Search field, and choose Add Package Dependenc
 
 ```swift
 
-import Foundation
+import SpriteKit
 import WHPlayingCardImageKit
 import WHCrossPlatformKit
 
@@ -44,16 +44,16 @@ func createCardImageQS() -> WHImage {
 
 ```swift
 
-import Foundation
+import SpriteKit
 import WHPlayingCardImageKit
 import WHCrossPlatformKit
 
 func createPinochleDeck() -> [Card] {
     var pinochleDeck:[Card] = []
     let pinochleRanks:[Rank] = [.nine, .jack, .queen, .king, .ten, .ace]
-    for suit in Suit.all4Suits {
-        for rank in pinochleRanks {
-            for packId in 0 ..< 2 {
+    for packId in 0 ..< 2 {
+        for suit in Suit.all4Suits {
+            for rank in pinochleRanks {
                 let card = Card(rank: rank, suit: suit, packId: packId)
                 pinochleDeck.append(card)
             }
@@ -75,5 +75,19 @@ func createPinochleCardImageAtlas(pinochleDeck: [Card], scaleFactor: CGFloat) ->
         }
     }
     return pinochleCardImageAtlas
+}
+```
+
+### Creating one card back image
+
+```swift
+import SpriteKit
+import WHPlayingCardImageKit
+import WHPlayingCardKit
+import WHCrossPlatformKit
+
+func createCardBackImage(cardSize: CGSize) -> WHImage {
+    let cardBackImage = CardBackImage.makeCardBackImage(cardSize: cardSize, fillColor: .blue, backgroundColor: .white)
+    return cardBackImage
 }
 ```
