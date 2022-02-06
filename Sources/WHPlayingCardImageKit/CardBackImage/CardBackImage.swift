@@ -1,6 +1,6 @@
 //
 //  CardBackImage.swift
-//  CardImageKit
+//  WHPlayingCardImageKit
 //
 //  Created by William Hale on 10/6/14.
 //
