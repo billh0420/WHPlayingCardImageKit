@@ -1,9 +1,8 @@
 //
 //  FullCardFaceDrawImage.swift
-//  CardImageKit
+//  WHPlayingCardImageKit
 //
 //  Created by William Hale on 6/9/19.
-//  Copyright © 2019 William Hale. All rights reserved.
 //
 
 import SpriteKit
