@@ -52,12 +52,10 @@ func createPinochleDeck() -> [Card] {
     var pinochleDeck:[Card] = []
     let pinochleRanks:[Rank] = [.nine, .jack, .queen, .king, .ten, .ace]
     for suit in Suit.all4Suits {
-        for rank in Rank.allRanks {
+        for rank in pinochleRanks {
             for packId in 0 ..< 2 {
-                if pinochleRanks.contains(rank) {
-                    let card = Card(rank: rank, suit: suit, packId: packId)
-                    pinochleDeck.append(card)
-                }
+                let card = Card(rank: rank, suit: suit, packId: packId)
+                pinochleDeck.append(card)
             }
         }
     }
