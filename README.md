@@ -8,7 +8,7 @@ A swift package to make 52 playing card images for a given scale factor.
 
 ## Requirements
 
-- iOS 9.0+
+- iOS 10.0+
 - macOS 10.11+
 
 ## Features
