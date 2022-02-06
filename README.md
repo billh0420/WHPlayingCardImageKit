@@ -28,7 +28,7 @@ You can also navigate to your project's pane, select "Package Dependencies", cli
 enter the repository URL into the Search field, and choose Add Package Dependency.
 
 ## Usage examples
-### Creating one card image
+### Create one card image
 
 ```swift
 
@@ -45,7 +45,7 @@ func createCardImageQS() -> WHImage {
 }
 ```
 
-### Creating a pinochle deck and its card images
+### Create a pinochle deck and its card images
 
 ```swift
 
@@ -84,7 +84,7 @@ func createPinochleCardImageAtlas(pinochleDeck: [Card], scaleFactor: CGFloat) ->
 }
 ```
 
-### Creating one card back image
+### Create one card back image
 
 ```swift
 import SpriteKit
