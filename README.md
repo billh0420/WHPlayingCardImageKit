@@ -92,6 +92,7 @@ import WHPlayingCardImageKit
 import WHPlayingCardKit
 import WHCrossPlatformKit
 
+// Note: Cards can share the same card back image.
 func createCardBackImage(cardSize: CGSize) -> WHImage {
     let cardBackImage = CardBackImage.makeCardBackImage(cardSize: cardSize, fillColor: .blue, backgroundColor: .white)
     return cardBackImage
