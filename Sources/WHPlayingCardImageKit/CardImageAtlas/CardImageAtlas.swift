@@ -1,9 +1,8 @@
 //
 //  CardImageAtlas.swift
-//  CardImageKit
+//  WHPlayingCardImageKit
 //
 //  Created by William Hale on 2/1/17.
-//  Copyright © 2017 William Hale. All rights reserved.
 //
 
 import SpriteKit
