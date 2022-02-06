@@ -140,3 +140,6 @@ extension GameViewController {
     }
 }
 ```
+
+## Documentation
+You can create the current documentation for this package in Xcode by selecting 'Build Documentation' from the 'Product' menu item.
