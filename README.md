@@ -62,7 +62,7 @@ func createPinochleDeck() -> [Card] {
     return pinochleDeck
 }
 
-// An atlas of card images keyed by card name.
+// Create an atlas of card images keyed by card name.
 // Note only 24 images are created.
 // The same card from different packs can share the same common card image.
 func createPinochleCardImageAtlas(pinochleDeck: [Card], scaleFactor: CGFloat) -> Dictionary<String, WHImage> {
