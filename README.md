@@ -64,16 +64,16 @@ func createPinochleDeck() -> [Card] {
 
 // Note only 24 images are created.
 // The same card from different packs can share the same common card image.
-func createPinochleCardImages(pinochleDeck: [Card], scaleFactor: CGFloat) -> [WHImage] {
-    var pinochleCardImages:[WHImage] = []
+func createPinochleCardImageAtlas(pinochleDeck: [Card], scaleFactor: CGFloat) -> Dictionary<String, WHImage> {
+    var pinochleCardImageAtlas:[String: WHImage] = [:]
     let defaultCardSize = CardImageAtlas.cardImageAtlasDefaultCardSize
     let fullCardImageMaker = FullCardImageMaker(defaultCardSize: defaultCardSize, scaleFactor: scaleFactor)
     for card in pinochleDeck {
         if card.packId == 0 {
             let cardImage = fullCardImageMaker.makeCardImageFor(rank: card.rank, suit: card.suit)
-            pinochleCardImages.append(cardImage)
+            pinochleCardImageAtlas[card.name] = cardImage
         }
     }
-    return pinochleCardImages
+    return pinochleCardImageAtlas
 }
 ```
