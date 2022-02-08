@@ -24,7 +24,7 @@ public class CardImageAtlas {
     public static let cardImageAtlasDefaultCardSize = CGSize(width: 56, height: 70)
 
     /// A boolean that indicates whether to load full card images or partial card images.
-    public let isUseFullCardImage:Bool
+    public var isUseFullCardImage:Bool
 
     /// An atlas of card images keyed by card name.
     ///
@@ -68,8 +68,10 @@ extension CardImageAtlas {
             }
         }
     }
+}
 
-    private func createCardImageDictionary(cards:[Card], defaultCardSize:CGSize, scaleFactor:CGFloat) -> Dictionary<String, WHImage> { // 170709
+extension CardImageAtlas {
+    fileprivate func createCardImageDictionary(cards:[Card], defaultCardSize:CGSize, scaleFactor:CGFloat) -> Dictionary<String, WHImage> { // 170709
         var cardImageDictionary:Dictionary<String, WHImage> = [:]
         if isUseFullCardImage {
             let fullCardImageMaker = FullCardImageMaker(defaultCardSize: defaultCardSize, scaleFactor: scaleFactor)
