@@ -67,7 +67,7 @@ extension FullCardImageMaker {
     fileprivate var rankTabX:CGFloat { return cardWidth * rankTabXFactor }
     fileprivate var rankTabY:CGFloat { return cardHeight * rankTabYFactor }
 
-    fileprivate var cornerPipTabY:CGFloat { return rankTabY + rankFontSize }
+    fileprivate var cornerPipTabY:CGFloat { return rankTabY + rankFontSize + scaleFactor * 1 }
 
     fileprivate var smallPipHeight:CGFloat { return cardHeight * smallPipHeightFactor }
 }
